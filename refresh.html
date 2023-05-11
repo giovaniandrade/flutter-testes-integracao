@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Política de Privacidade Convcard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5">
+    <style type="text/css">
+    	body {
+    		margin: 100px auto;
+    		width: 70%;
+			font: normal 22px Arial;
+			line-height: 32px;
+    	}
+    	h1 {
+    		text-align: center;
+    		color: #002060;
+    		line-height: 50px;
+    	}
+    	p {
+    		text-align: justify;
+    	}
+    	ul li {
+    		margin: 3% 0;
+    	}
+    </style>
+			<script type="text/javascript">
+				function generateColor() {
+				  const letters = '0123456789ABCDEF';
+				  let color = '#';
+				  for (let i = 0; i < 6; i++) {
+				    color += letters[Math.floor(Math.random() * 16)];
+				  }
+				  return color;
+				}
+
+				function getDateTime() {
+	        var now     = new Date(); 
+	        var year    = now.getFullYear();
+	        var month   = now.getMonth()+1; 
+	        var day     = now.getDate();
+	        var hour    = now.getHours();
+	        var minute  = now.getMinutes();
+	        var second  = now.getSeconds(); 
+	        if(month.toString().length == 1) {
+	             month = '0'+month;
+	        }
+	        if(day.toString().length == 1) {
+	             day = '0'+day;
+	        }   
+	        if(hour.toString().length == 1) {
+	             hour = '0'+hour;
+	        }
+	        if(minute.toString().length == 1) {
+	             minute = '0'+minute;
+	        }
+	        if(second.toString().length == 1) {
+	             second = '0'+second;
+	        }   
+	        var dateTime = day+'/'+month+'/'+year+' '+hour+':'+minute+':'+second;   
+	         return dateTime;
+		    }
+
+		    // setInterval(function(){
+		    //     currentTime = getDateTime();
+		    //     document.getElementById("digital-clock").innerHTML = currentTime;
+		    // }, 1000);
+
+        setTimeout(()=> {
+        	var currentTime = getDateTime();
+        	document.getElementById("digital-clock").innerHTML = '<span style="font-size: 30px; color:' + generateColor() + '">' + currentTime + '</span>';
+        	}, 1000);
+
+			</script>    
+  </head>
+  <body>
+  	<div><img src="images/logo-politica.png" border="0" width="250" /></div>
+  	<h1>TESTE DE REFRESH</h1>
+    <p>Agora são:</p>
+		<p>
+			<div id="digital-clock"></div>
+		</p>
+	<ul>
+		<li>As informações acima são confidenciais.</li>
+		<li>Verifique as horas antes de prosseguir</li>
+	</ul>
+	<p>O uso de quaisquer sistemas Convcard, pressupõe a aceitação deste Acordo de privacidade. A equipe Convcard reserva-se ao direito de alterar este acordo sem aviso prévio. Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade de forma a estar sempre atualizado.</p>
+  </body>
+</html>
+
